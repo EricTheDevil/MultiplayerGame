@@ -1,7 +1,6 @@
 using UnityEngine;
 using System;
 using UdpKit;
-using Photon.Bolt;
 
 namespace Bolt.Samples.Photon.Lobby
 {

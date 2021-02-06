@@ -1,10 +1,7 @@
+using Bolt.Matchmaking;
 using System;
-using Photon.Bolt;
-using Photon.Bolt.Matchmaking;
-using Photon.Bolt.Utils;
 using UdpKit;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Bolt.Samples.Photon.Lobby
 {

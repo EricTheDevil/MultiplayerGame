@@ -71,20 +71,13 @@ using UnityEngine;
 		public static void Spawn()
 		{
 			var pos = new Vector3(Random.Range(-16, 16), 0.6f, Random.Range(-16, 16));
-			BoltEntity playerEntity = BoltNetwork.Instantiate(BoltPrefabs.BomberPlayer, pos, Quaternion.identity);
-			playerEntity.TakeControl();
+			//BoltEntity playerEntity = BoltNetwork.Instantiate(BoltPrefabs.BomberPlayer, pos, Quaternion.identity);
+			//playerEntity.TakeControl();
 
-			BomberPlayerController playerController = playerEntity.GetComponent<BomberPlayerController>();
+			//BomberPlayerController playerController = playerEntity.GetComponent<BomberPlayerController>();
 
-			Photon.Lobby.LobbyPlayer lobbyPlayer = Photon.Lobby.LobbyPlayer.localPlayer;
+			//Photon.Lobby.LobbyPlayer lobbyPlayer = Photon.Lobby.LobbyPlayer.localPlayer;
 
-			if (lobbyPlayer)
-			{
-				playerController.Setup(lobbyPlayer.playerName, lobbyPlayer.playerColor);
-			}
-			else
-			{
-				playerController.Setup("Player #" + Random.Range(1, 100), Random.ColorHSV());
-			}
+
 		}
 	}

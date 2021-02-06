@@ -1,13 +1,11 @@
 using System;
-using Photon.Bolt;
-using Photon.Bolt.Utils;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 namespace Bolt.Samples.Photon.Lobby
 {
-	public class LobbyPlayer : EntityEventListener<ILobbyPlayerInfoState>
+    public class LobbyPlayer : EntityEventListener<ILobbyPlayerInfoState>
 	{
 		// Bolt
 		public BoltConnection connection;

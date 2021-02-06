@@ -1,9 +1,6 @@
 using System.Collections;
+using Bolt.Matchmaking;
 using Bolt.Samples.Photon.Lobby.Utilities;
-using Bolt.Samples.Photon.Simple;
-using Photon.Bolt;
-using Photon.Bolt.Matchmaking;
-using Photon.Bolt.Utils;
 using UdpKit;
 using UdpKit.Platform;
 using UnityEngine;
@@ -11,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 namespace Bolt.Samples.Photon.Lobby
 {
-	public partial class LobbyManager : GlobalEventListener
+    public partial class LobbyManager : GlobalEventListener
 	{
 		public static LobbyManager Instance;
 
@@ -162,27 +159,30 @@ namespace Bolt.Samples.Photon.Lobby
 
 		public override void BoltStartBegin()
 		{
+            /*
 			BoltNetwork.RegisterTokenClass<RoomProtocolToken>();
 			BoltNetwork.RegisterTokenClass<ServerAcceptToken>();
 			BoltNetwork.RegisterTokenClass<ServerConnectToken>();
+            */
 		}
 
 		public override void BoltStartDone()
 		{
 			if (BoltNetwork.IsServer)
 			{
-				var token = new RoomProtocolToken()
+				/*var token = new RoomProtocolToken()
 				{
 					ArbitraryData = "My DATA",
 				};
-
+                  */
 				BoltLog.Info("Starting Server");
 
 				// Start Photon Room
-				BoltMatchmaking.CreateSession(
+				/*BoltMatchmaking.CreateSession(
 						sessionID: matchName,
 						token: token
 				);
+                */
 			}
 			else if (BoltNetwork.IsClient)
 			{
@@ -204,8 +204,8 @@ namespace Bolt.Samples.Photon.Lobby
 			SessionCreatedUIHandler(session);
 
 			// Build Server Entity
-			var entity = BoltNetwork.Instantiate(BoltPrefabs.PlayerInfo);
-			entity.TakeControl();
+			//var entity = BoltNetwork.Instantiate(BoltPrefabs.PlayerInfo);
+			//entity.TakeControl();
 		}
 
 		public override void BoltShutdownBegin(AddCallback registerDoneCallback, UdpConnectionDisconnectReason disconnectReason)
@@ -267,8 +267,8 @@ namespace Bolt.Samples.Photon.Lobby
 			{
 				BoltLog.Info("Connected Server: {0}", connection);
 
-				var entity = BoltNetwork.Instantiate(BoltPrefabs.PlayerInfo);
-				entity.AssignControl(connection);
+				//var entity = BoltNetwork.Instantiate(BoltPrefabs.PlayerInfo);
+				//entity.AssignControl(connection);
 			}
 		}
 
