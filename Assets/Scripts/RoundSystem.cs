@@ -47,32 +47,27 @@ public class RoundSystem : MonoBehaviour
     }
     void MovePlayer()
     {
-        Random e = new Random();
-
-        int diceRoll = Random.Range(1, 7);
-        float step = walkingSpeed * Time.deltaTime;
-
-        playerOneUnit.newPos = playerOneUnit.oldPos + diceRoll;
-        StartCoroutine(
-            LerpPosition
-            (
-                playerOne.transform,
-                tilesPrefab.tiles[playerOneUnit.oldPos].position,
-                tilesPrefab.tiles[playerOneUnit.newPos].position,
-                2f
-            )
-        );
+        if(state == RoundState.MOVING)
+        { 
+            int diceRoll = Random.Range(1, 7);
+            Debug.Log(diceRoll);
+            playerOneUnit.newPos = playerOneUnit.oldPos + diceRoll;
+        
+            StartCoroutine(
+                LerpPosition
+                (
+                    playerOne.transform,
+                    tilesPrefab.tiles[playerOneUnit.oldPos].position,
+                    tilesPrefab.tiles[playerOneUnit.newPos].position,
+                    2f
+                )
+            );
+        }
 
         //playerOne.transform.position = Vector3.Lerp(tilesPrefab.tiles[playerOneUnit.oldPos].position, tilesPrefab.tiles[playerOneUnit.newPos].position, 2f * Time.deltaTime);
 
         playerOneUnit.oldPos = playerOneUnit.newPos;
-        Debug.Log(playerOneUnit.newPos);
 
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            Random.Range(-10.0f, 10.0f);
-
-        }
         state = RoundState.WAITING;
     }
     IEnumerator LerpPosition(Transform player, Vector3 startPosition, Vector3 targetPosition, float duration)
