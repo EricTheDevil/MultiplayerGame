@@ -16,7 +16,7 @@ namespace Bolt.Samples.Photon.Lobby
 		[SerializeField] private SceneField lobbyScene;
 		[SerializeField] private SceneField gameScene;
 
-		[SerializeField] private int minPlayers = 2;
+		[SerializeField] private int minPlayers = 1;
 
 		[Tooltip("Time in second between all players ready & match start")]
 		[SerializeField]
@@ -56,7 +56,7 @@ namespace Bolt.Samples.Photon.Lobby
 		private void StartGamePlay()
 		{
 			Debug.Log(string.Format("Lobby Scene: {0}", lobbyScene.SimpleSceneName));
-			Debug.Log(string.Format("Game Scene: {0}", gameScene.SimpleSceneName));
+			Debug.Log(string.Format("Game Scene: {0}", gameScene));
 		}
 
 		// Game Loop
@@ -123,7 +123,7 @@ namespace Bolt.Samples.Photon.Lobby
 			countdown.Time = 0;
 			countdown.Send();
 
-			BoltNetwork.LoadScene(gameScene.SimpleSceneName);
+			BoltNetwork.LoadScene(gameScene);
 		}
 
 		// Bolt Callbacks
@@ -178,11 +178,7 @@ namespace Bolt.Samples.Photon.Lobby
 				BoltLog.Info("Starting Server");
 
 				// Start Photon Room
-				/*BoltMatchmaking.CreateSession(
-						sessionID: matchName,
-						token: token
-				);
-                */
+				BoltMatchmaking.CreateSession(sessionID: matchName);
 			}
 			else if (BoltNetwork.IsClient)
 			{
