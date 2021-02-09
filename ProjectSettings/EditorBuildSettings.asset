@@ -4,7 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/LobbyManager/Scenes/PhotonLobby.unity
+    guid: 42d6ac873a5b84d439478f72d40c21ce
+  - enabled: 1
+    path: Assets/Scenes/Verneri/Board.unity
+    guid: 93cbf7c5793ad5846b2967c4c1d99428
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 40a7d90cedcde6f4a81d229aeadee254,
       type: 2}
