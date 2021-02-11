@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager gameManagerInstance;
     [SerializeField] public GameObject player;
+
+    [SerializeField] public bool gameOver = false;
     public static GameManager instance
     {
         get
