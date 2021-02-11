@@ -41,11 +41,11 @@ public class PlayerController : MonoBehaviour
     {
         if (!fellDown)
         {
-            float horizInput = Input.GetAxis(horizontalInputName);
+            float horizInput = Input.GetAxis("Horizontal");
             //float vertInput = Input.GetAxis(verticalInputName);
 
-            Vector3 forwardMovement = transform.forward * vertInput;
-            Vector3 rightMovement = -transform.right * horizInput * 5f;
+            Vector3 forwardMovement = transform.right * vertInput;
+            Vector3 rightMovement = -transform.forward * horizInput * 5f;
 
             // ramp up the speed until you get hit
             charController.SimpleMove(Vector3.ClampMagnitude(forwardMovement + rightMovement, 1.0f) * movementSpeed);
