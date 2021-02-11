@@ -2445,10 +2445,11 @@
           "BitsRequired": 8
         }
       },
-      "Name": "CubeState",
+      "Name": "CustomCubeState",
       "Guid": "59c907e2-5a0e-4d64-a471-19b9fcbb8169",
       "Groups": [
-        "samples"
+        "samples",
+        "Board"
       ]
     },
     {
@@ -4395,7 +4396,83 @@
       "Groups": [
         "samples"
       ]
+    },
+    {
+      "$type": "Bolt.Compiler.StateDefinition, bolt.compiler",
+      "Properties": [],
+      "PacketMaxBits": 512,
+      "PacketMaxProperties": 16,
+      "InitialPositionCompression": {
+        "Compression": [
+          {
+            "MinValue": -1024,
+            "MaxValue": 1024,
+            "Accuracy": 0.01,
+            "Pack": 100.0,
+            "Read": 0.01,
+            "Shift": 1024.0,
+            "BitsRequired": 18
+          },
+          {
+            "MinValue": -1024,
+            "MaxValue": 1024,
+            "Accuracy": 0.01,
+            "Pack": 100.0,
+            "Read": 0.01,
+            "Shift": 1024.0,
+            "BitsRequired": 18
+          },
+          {
+            "MinValue": -1024,
+            "MaxValue": 1024,
+            "Accuracy": 0.01,
+            "Pack": 100.0,
+            "Read": 0.01,
+            "Shift": 1024.0,
+            "BitsRequired": 18
+          }
+        ]
+      },
+      "InitialRotationCompression": {
+        "EulerCompression": [
+          {
+            "MaxValue": 360,
+            "Accuracy": 1.0,
+            "Pack": 1.0,
+            "Read": 1.0,
+            "BitsRequired": 9
+          },
+          {
+            "MaxValue": 360,
+            "Accuracy": 1.0,
+            "Pack": 1.0,
+            "Read": 1.0,
+            "BitsRequired": 9
+          },
+          {
+            "MaxValue": 360,
+            "Accuracy": 1.0,
+            "Pack": 1.0,
+            "Read": 1.0,
+            "BitsRequired": 9
+          }
+        ],
+        "QuaternionCompression": {
+          "MinValue": -1,
+          "MaxValue": 1,
+          "Accuracy": 0.01,
+          "Pack": 100.0,
+          "Read": 0.01,
+          "Shift": 1.0,
+          "BitsRequired": 8
+        }
+      },
+      "Name": "CubeState",
+      "Guid": "a7badcc5-ab28-471f-a2b1-ff17bd9f9ece",
+      "Groups": [
+        "samples"
+      ]
     }
   ],
-  "ActiveGroup": "samples"
+  "ActiveGroup": "Board"
 }
