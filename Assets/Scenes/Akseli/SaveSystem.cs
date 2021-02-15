@@ -2,19 +2,20 @@
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Globalization;
 
 
 public class SaveSystem : MonoBehaviour
 {
 
-    System.DateTime startTime;
-    public System.TimeSpan saveTime;
+    float startTime;
+    public float saveTime;
     public Text texti;
-    public string data;
+    public float data;
     void Start()
     {
 
-        startTime = System.DateTime.Now;
+        
 
        
     }
@@ -22,8 +23,9 @@ public class SaveSystem : MonoBehaviour
 
     public void SaveData()
     {
-        saveTime = System.DateTime.Now - startTime;
-        string savethis = saveTime.ToString();
+        saveTime = startTime;
+        loaddata();
+        float savethis = saveTime + data;
         BinaryFormatter formatter = new BinaryFormatter();
         string path = Application.persistentDataPath + "/user.json";
         FileStream steam = new FileStream(path, FileMode.Create);
@@ -34,7 +36,7 @@ public class SaveSystem : MonoBehaviour
 
     }
 
-    public string loaddata()
+    public float loaddata()
     {
         string path = Application.persistentDataPath + "/user.json";
 
@@ -44,9 +46,20 @@ public class SaveSystem : MonoBehaviour
             BinaryFormatter formatter = new BinaryFormatter();
             FileStream steam = new FileStream(path, FileMode.Open);
 
-            data = formatter.Deserialize(steam) as string;
-            
+            string gottendata = formatter.Deserialize(steam) as string;
+
             steam.Close();
+
+            if(gottendata != null)
+            {
+                data = float.Parse(gottendata, CultureInfo.InvariantCulture);
+            }
+            else
+            {
+                data = 0;
+            }
+
+            print("gottendata" + gottendata);
 
             return data;
 
@@ -54,7 +67,7 @@ public class SaveSystem : MonoBehaviour
         else
         {
             Debug.LogError("save file not found" + path);
-            return null;
+            return 0;
         }
 
 
@@ -67,6 +80,7 @@ public class SaveSystem : MonoBehaviour
 
     private void Update()
     {
+        
         if (Input.GetMouseButtonDown(1))
         {
             SaveData();
@@ -74,12 +88,12 @@ public class SaveSystem : MonoBehaviour
         if (Input.GetMouseButtonDown(2))
         {
             loaddata();
-            string thiss = data;
+            
             print(data);
-            texti.text = thiss;
+            texti.text = startTime.ToString();
         }
+        startTime = Time.time;
 
-       
     }
 
 }
