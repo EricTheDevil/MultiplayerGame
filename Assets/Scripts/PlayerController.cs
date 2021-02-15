@@ -30,8 +30,8 @@ public class PlayerController : MonoBehaviour
     }
 
     private void FixedUpdate()
-    {         
-        if (!GameManager.instance.gameOver)
+    {        
+        if (!fellDown)
         {
             PlayerMovement();
         }
