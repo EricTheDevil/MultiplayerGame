@@ -3,11 +3,12 @@ using UnityEngine;
 
 public class NetworkCallbacks : GlobalEventListener
 {
-    public GameObject cubePrefab;
+    [SerializeField] GameObject cubePrefab;
+    [SerializeField] GameObject spawnPos;
 
     public override void SceneLoadLocalDone(string scene)
     {
-        Vector3 spawnPos = new Vector3(0, 0.5f, 25);
-        BoltNetwork.Instantiate(cubePrefab, spawnPos, Quaternion.identity);
+        
+        BoltNetwork.Instantiate(cubePrefab, spawnPos.transform.position, Quaternion.identity);
     }
 }

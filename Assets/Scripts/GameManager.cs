@@ -19,4 +19,9 @@ public class GameManager : MonoBehaviour
             return gameManagerInstance;
         }
     }
+
+    public void Start()
+    {
+        player = GetComponent<RoundSystem>().playerOnePrefab;
+    }
 }
