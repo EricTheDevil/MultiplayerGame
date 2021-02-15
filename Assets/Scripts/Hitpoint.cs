@@ -8,9 +8,9 @@ public class Hitpoint : MonoBehaviour
     // Start is called before the first frame update
     public void OnTriggerEnter(Collider other)
     {
-
-            DataHolder.Points += 1;
-            SceneManager.UnloadSceneAsync(1);
+        RoundSystem.Instance.trophies += 3;
+        DataHolder.Points += 1;           
+        SceneManager.UnloadSceneAsync(1);
             
     }
    
