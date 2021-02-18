@@ -10,7 +10,7 @@ public class Hitpoint : MonoBehaviour
     {
         RoundSystem.Instance.trophies += 3;
         DataHolder.Points += 1;           
-        SceneManager.UnloadSceneAsync(1);
+        SceneManager.UnloadSceneAsync(2);
             
     }
    

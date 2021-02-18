@@ -27,7 +27,7 @@ public class RoundSystem : MonoBehaviour
     public GameObject playerOnePrefab;
 
     public Camera mainCamera;
-    GameObject playerOne;
+    public GameObject playerOne;
 
     float walkingSpeed=5f;
     int diceRoll;
@@ -59,7 +59,7 @@ public class RoundSystem : MonoBehaviour
     }
     IEnumerator SetupRound()
     {
-        playerOne = Instantiate(playerOnePrefab, spawnRoom);
+        playerOne = Instantiate(playerOnePrefab, spawnRoom.transform.position, Quaternion.identity);
         playerOneUnit = playerOne.GetComponent<Unit>();
 
         negativeTiles.Add(4);
@@ -123,7 +123,7 @@ public class RoundSystem : MonoBehaviour
     }
     public void LoadMinigame()
     {
-        SceneManager.LoadSceneAsync(1, LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);
         GameObject spawn = GameObject.Find("Spawn");     
     }
     IEnumerator LerpPosition(Transform player, Vector3 startPosition, Vector3 targetPosition, float duration)
