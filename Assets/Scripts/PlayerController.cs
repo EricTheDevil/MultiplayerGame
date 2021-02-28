@@ -22,10 +22,27 @@ public class PlayerController : MonoBehaviour
 
     public bool fellDown;
     public GameObject A;
+
     private void Awake()
     {
         anim = GetComponentInChildren<Animator>();
         charController = GetComponent<CharacterController>();
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            movementSpeed = 1;
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            movementSpeed = 15;
+        }
     }
 
     private void FixedUpdate()
