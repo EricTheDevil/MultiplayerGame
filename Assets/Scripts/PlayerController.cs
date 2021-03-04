@@ -23,6 +23,24 @@ public class PlayerController : MonoBehaviour
     public bool fellDown;
     public GameObject A;
 
+    [SerializeField] bool isFlat = true;
+    private Rigidbody rigid;
+
+    void Start()
+    {
+        rigid = GetComponent<Rigidbody>();
+    }
+
+    private void Update()
+    {
+        Vector3 tilt = Input.acceleration;
+
+        if (isFlat)
+            tilt = Quaternion.Euler(90, 0, 0) * tilt * movementSpeed;
+
+        rigid.AddForce(tilt);
+    }
+
     private void Awake()
     {
         anim = GetComponentInChildren<Animator>();
@@ -44,7 +62,7 @@ public class PlayerController : MonoBehaviour
             movementSpeed = 15;
         }
     }
-
+    
     private void FixedUpdate()
     {
         if (!fellDown)
