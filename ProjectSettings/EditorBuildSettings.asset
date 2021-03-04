@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Stefanos/Multiplayer.unity
-    guid: 154ef8d7b886fd0499093294c51f5765
+    path: Assets/Scenes/Eric/Menu.unity
+    guid: 70ccbc3ede70bba4fb9719e9e491a135
   - enabled: 1
     path: Assets/Scenes/Eric/Game.unity
     guid: bc865b916122b0c40923296efa624ad6
