@@ -54,10 +54,15 @@ public class NetworkPlayer : EntityBehaviour<IPlayer>
         if (!entity.IsOwner)
         {
             transform.position = state.Transform.Transform.position;
+            isReady = state.isReady;
             points = (int)state.Trophies;
+
         }
         else
         {
+
+            state.isReady = PlayerInstance.instance.GetComponent<Unit>().isReady;
+            isReady = state.isReady;
             state.Trophies = points;
             state.Transform.Transform.position = PlayerInstance.instance.transform.position;
         }

@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public enum RoundState { START, WAITING, MOVING, WON, LOST, PLAYERONE, DICE, MINIGAME, ROLLING}
+public enum RoundState { START, WAITING, MOVING, WON, LOST, PLAYERONE, DICE, MINIGAME, ROLLING, NEXTROUND}
 public class RoundSystem : MonoBehaviour
 {
     public static RoundSystem Instance { get; set; }
@@ -15,7 +16,6 @@ public class RoundSystem : MonoBehaviour
     public int maxTurns = 3;
 
     Unit playerOneUnit;
-    Unit playerTwoUnit;
 
     public List<int> negativeTiles = new List<int>();
     public List<int> trophyTiles = new List<int>();
@@ -29,8 +29,10 @@ public class RoundSystem : MonoBehaviour
     public Camera mainCamera;
     public GameObject playerOne;
 
+    public int playersReady = 0;
     float walkingSpeed=5f;
     int diceRoll;
+
 
     public Button diceButton; 
     public TMP_Text diceText;
@@ -92,8 +94,8 @@ public class RoundSystem : MonoBehaviour
     }
     IEnumerator MovePlayer()
     {
-        if(state == RoundState.MOVING)
-        { 
+        if (state == RoundState.MOVING)
+        {
             diceRoll = Random.Range(1, 7);
             playerOneUnit.newPos = playerOneUnit.oldPos + diceRoll;
 
@@ -103,9 +105,9 @@ public class RoundSystem : MonoBehaviour
                 playerOneUnit.newPos -= playerOneUnit.oldPos;
                 lap++;
                 PlayerInstance.instance.GetComponent<Unit>().unitScore += 3;
-            
+
             }
-           
+
             StartCoroutine(
                 LerpPosition
                 (
@@ -116,12 +118,13 @@ public class RoundSystem : MonoBehaviour
                 )
             );
 
-            state = RoundState.WAITING;
+            state = RoundState.WAITING;                
+        }    
+        yield return null;
+        diceButton.GetComponent<Button>().interactable = true;
 
-            yield return null;
-        }
-        //playerOne.transform.position = Vector3.Lerp(tilesPrefab.tiles[playerOneUnit.oldPos].position, tilesPrefab.tiles[playerOneUnit.newPos].position, 2f * Time.deltaTime);
     }
+        //playerOne.transform.position = Vector3.Lerp(tilesPrefab.tiles[playerOneUnit.oldPos].position, tilesPrefab.tiles[playerOneUnit.newPos].position, 2f * Time.deltaTime);
     public void LoadMinigame()
     {
         SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);
@@ -151,7 +154,7 @@ public class RoundSystem : MonoBehaviour
                      2f
                  )
              );
-        state = RoundState.WAITING;
+        state = RoundState.NEXTROUND;
     }
     IEnumerator LerpPosition(Transform player, Vector3 startPosition, Vector3 targetPosition, float duration)
     {
@@ -185,28 +188,23 @@ public class RoundSystem : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         //LoadMinigame();
-        diceButton.GetComponent<Button>().interactable = true;
-
-
     }
     public void EndTurn() {
         PlayerTurn();
     }
     public void RollDice()
     {
-        for(int i = 0; i < NetworkCallback.GetPlayers().Count; i++)
+        PlayerInstance.instance.GetComponent<Unit>().isReady = false;
+        int counter = 0;
+        List<bool> readyCheck = new List<bool>();
+        readyCheck.Clear();
+        for (int i = 0; i < NetworkCallback.GetPlayers().Count; i++)
         {
-            if (NetworkCallback.GetPlayers()[i].GetComponent<NetworkPlayer>().isReady)
-            {
-                Debug.Log(NetworkCallback.GetPlayers()[i]);
-            }
+            state = RoundState.MOVING;
+            diceButton.GetComponent<Button>().interactable = false;
+           
+            StartCoroutine(MovePlayer());
         }
-        state = RoundState.MOVING;
-        diceButton.GetComponent<Button>().interactable = false;
-        StartCoroutine(MovePlayer());
-        
-        Debug.Log(NetworkCallback.GetPlayers()[0].GetComponent<NetworkPlayer>().GetPoints());
-
     }
     public void CalculatePoints()
     {
@@ -237,7 +235,19 @@ public class RoundSystem : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        trophiesText.text = PlayerInstance.instance.GetComponent<Unit>().unitScore.ToString();
+        /*
+        for (int i = 0; i < NetworkCallback.GetPlayers().Count; i++)
+        {
+            if (NetworkCallback.GetPlayers().Where(c => c.GetComponent<NetworkPlayer>().isReady).Count() == 0) {
+                for (int j = 0; j < NetworkCallback.GetPlayers().Count; j++)
+                {        
+                    diceButton.GetComponent<Button>().interactable = true;                
+                }
+            }
+            Debug.Log(NetworkCallback.GetPlayers().Where(c => c.GetComponent<NetworkPlayer>().isReady).Count());
+        }
+        */
+            trophiesText.text = PlayerInstance.instance.GetComponent<Unit>().unitScore.ToString();
     }
     private void OnDrawGizmos()
     {

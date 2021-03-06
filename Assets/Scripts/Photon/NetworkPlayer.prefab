@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 109587990645338878}
   - component: {fileID: 109587990645338879}
   - component: {fileID: 109587990645338864}
-  - component: {fileID: 9062777975805492376}
   - component: {fileID: 7328168630256427349}
   m_Layer: 0
   m_Name: NetworkPlayer
@@ -125,24 +124,6 @@ MonoBehaviour:
   _entityBehaviourQueryOption: 0
   _entityPriorityCalculatorQueryOption: 1
   _entityReplicationFilterQueryOption: 1
---- !u!114 &9062777975805492376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 109587990645338865}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f91447aa3136d17469381d5218cf7643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unitName: 
-  unitText: 
-  unitLevel: 0
-  unitScore: 0
-  oldPos: 0
-  newPos: 0
 --- !u!114 &7328168630256427349
 MonoBehaviour:
   m_ObjectHideFlags: 0
