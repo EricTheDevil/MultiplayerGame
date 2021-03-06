@@ -36,9 +36,11 @@ public class RoundSystem : MonoBehaviour
     public TMP_Text diceText;
     public TMP_Text trophiesText;
 
+    public Animator animator;
+
     private float secondsCount;
     bool gameOver;
-  
+
     // Start is called before the first frame update
 
     void Awake()
@@ -105,7 +107,9 @@ public class RoundSystem : MonoBehaviour
                 PlayerInstance.instance.GetComponent<Unit>().unitScore += 3;
             
             }
-           
+
+            animator.SetBool("IsMoving", true);
+
             StartCoroutine(
                 LerpPosition
                 (
@@ -120,6 +124,11 @@ public class RoundSystem : MonoBehaviour
 
             yield return null;
         }
+        else
+        {
+            animator.SetBool("IsMoving", false);
+        }
+
         //playerOne.transform.position = Vector3.Lerp(tilesPrefab.tiles[playerOneUnit.oldPos].position, tilesPrefab.tiles[playerOneUnit.newPos].position, 2f * Time.deltaTime);
     }
     public void LoadMinigame()
