@@ -9,8 +9,6 @@ public class NetworkPlayer : EntityBehaviour<IPlayer>
     public int points = 0;
     private GameObject localVRPlayer;
     public bool isReady;
-    public bool isFinished;
-
     // Start is called before the first frame update
     public int GetPoints()
     {
@@ -23,8 +21,7 @@ public class NetworkPlayer : EntityBehaviour<IPlayer>
     public override void Attached()
     {
         state.SetTransforms(state.Transform, transform);
-        isReady = state.isReady;
-        isFinished = state.isFinished;
+        
         if (entity.IsOwner == true)
         {
             /*
@@ -49,45 +46,18 @@ public class NetworkPlayer : EntityBehaviour<IPlayer>
             playerStatusCanvas.gameObject.SetActive(false);
             */
         }
-        state.AddCallback("isFinished", IsFinishedChanged);
+    }
 
-        state.AddCallback("isReady", IsReadyChanged);
-        state.AddCallback("Trophies", IsPointsChanged);
-
-
-    }
-    void IsReadyChanged()
-    {
-        isReady = state.isReady;
-    }
-    void IsFinishedChanged()
-    {
-        isFinished = state.isFinished;
-    }
-    void IsPointsChanged()
-    {
-        points = (int)state.Trophies;
-    }
     // Update is called once per frame
     public override void SimulateOwner()
     {
-        isReady = state.isReady;
         if (!entity.IsOwner)
         {
             transform.position = state.Transform.Transform.position;
-            isFinished = state.isFinished;
-            isReady = state.isReady;
             points = (int)state.Trophies;
         }
         else
         {
-            state.isReady = PlayerInstance.instance.GetComponent<Unit>().isReady;
-            points = PlayerInstance.instance.GetComponent<Unit>().unitScore;
-            isReady = state.isReady;
-
-            state.isFinished = PlayerInstance.instance.GetComponent<Unit>().isFinished;
-            isFinished = state.isFinished;
-
             state.Trophies = points;
             state.Transform.Transform.position = PlayerInstance.instance.transform.position;
         }

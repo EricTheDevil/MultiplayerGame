@@ -10,12 +10,9 @@ public class Unit : MonoBehaviour
 
     public int unitLevel;
     public int unitScore;
-    public int turn;
 
     public int oldPos = 0;
     public int newPos = 0;
-    public bool isReady ;
-    public bool isFinished ;
     //public int damage;
 
     public void MoveUnit(int movement)
