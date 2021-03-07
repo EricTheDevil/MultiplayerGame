@@ -38,20 +38,20 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 1
+  m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
     m_IndirectOutputScale: 1
     m_AlbedoBoost: 1
     m_EnvironmentLightingMode: 0
-    m_EnableBakedLightmaps: 1
+    m_EnableBakedLightmaps: 0
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
     serializedVersion: 12
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -135,7 +135,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &24332330
 Transform:
@@ -235,6 +235,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (73)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1001 &36024847
@@ -252,7 +257,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -304,8 +309,61 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
+--- !u!1 &40786692
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 40786694}
+  - component: {fileID: 40786693}
+  m_Layer: 0
+  m_Name: Global Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &40786693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40786692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: db2755e8c64062b4aa55f02f30088bae, type: 2}
+--- !u!4 &40786694
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40786692}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -200.72224, y: 4.22, z: 1168.5569}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &82024374
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,6 +464,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (77)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1001 &97617616
@@ -423,7 +486,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -474,6 +537,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -544,6 +612,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (85)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1 &98470537 stripped
@@ -603,7 +676,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -655,6 +728,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1 &114381159 stripped
@@ -697,7 +775,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -748,6 +826,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -818,6 +901,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (54)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1001 &141157100
@@ -835,7 +923,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -886,6 +974,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -1048,6 +1141,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Obstacle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8d8c70c8de7a41645a48f6e39788582f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d8c70c8de7a41645a48f6e39788582f, type: 3}
 --- !u!4 &205982977 stripped
@@ -1107,7 +1205,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -1158,6 +1256,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -1227,6 +1330,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (65)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -1338,6 +1446,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (79)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -1483,6 +1596,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Obstacle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 124b4e21a45ce934291ecd93e82d78dc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 124b4e21a45ce934291ecd93e82d78dc, type: 3}
 --- !u!1 &262827210 stripped
@@ -1597,7 +1715,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -1648,6 +1766,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -1718,6 +1841,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (75)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1 &297707134
@@ -1751,7 +1879,7 @@ Transform:
   m_LocalScale: {x: 30, y: 1, z: 500}
   m_Children: []
   m_Father: {fileID: 8722910012580724431}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: -90}
 --- !u!65 &297707136
 BoxCollider:
@@ -1853,7 +1981,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -1905,6 +2033,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1 &316654847 stripped
@@ -1947,7 +2080,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -1999,6 +2132,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1001 &341803949
@@ -2016,7 +2154,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -2067,6 +2205,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -2161,6 +2304,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a7639006159f286498b322792a0057d0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7639006159f286498b322792a0057d0, type: 3}
@@ -2325,6 +2473,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (53)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1001 &382638890
@@ -2419,6 +2572,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Obstacle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 124b4e21a45ce934291ecd93e82d78dc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 124b4e21a45ce934291ecd93e82d78dc, type: 3}
 --- !u!1001 &388344906
@@ -2487,6 +2645,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (84)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -2582,6 +2745,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (62)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1 &435079315 stripped
@@ -2624,7 +2792,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -2675,6 +2843,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -2795,6 +2968,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Obstacle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8d8c70c8de7a41645a48f6e39788582f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d8c70c8de7a41645a48f6e39788582f, type: 3}
 --- !u!1001 &439030219
@@ -2812,7 +2990,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -2863,6 +3041,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -2981,7 +3164,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94d26e999e48abd44995f27df76ca079, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
 --- !u!65 &441276125
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3195,6 +3377,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Obstacle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 124b4e21a45ce934291ecd93e82d78dc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 124b4e21a45ce934291ecd93e82d78dc, type: 3}
 --- !u!1001 &474990697
@@ -3263,6 +3450,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (52)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -3358,6 +3550,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (50)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1001 &512774027
@@ -3426,6 +3623,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (94)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -3588,101 +3790,13 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Obstacle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8d8c70c8de7a41645a48f6e39788582f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d8c70c8de7a41645a48f6e39788582f, type: 3}
---- !u!1 &573298707
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 573298708}
-  - component: {fileID: 573298711}
-  - component: {fileID: 573298710}
-  - component: {fileID: 573298709}
-  m_Layer: 0
-  m_Name: Ground
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &573298708
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 573298707}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -1.5, z: 1.2}
-  m_LocalScale: {x: 30, y: 1, z: 500}
-  m_Children: []
-  m_Father: {fileID: 8722910012580724431}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!65 &573298709
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 573298707}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &573298710
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 573298707}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 8881983ccc993b0498debee2557ed25b, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &573298711
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 573298707}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &589459749
 GameObject:
   m_ObjectHideFlags: 0
@@ -3849,6 +3963,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (95)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1 &600064241 stripped
@@ -3908,7 +4027,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -3959,6 +4078,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -4079,6 +4203,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (90)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1001 &648044907
@@ -4148,6 +4277,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (63)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1001 &664608338
@@ -4165,7 +4299,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -4216,6 +4350,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -4336,6 +4475,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Obstacle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a7639006159f286498b322792a0057d0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7639006159f286498b322792a0057d0, type: 3}
 --- !u!1 &676819667
@@ -4369,7 +4513,7 @@ Transform:
   m_LocalScale: {x: 30, y: 1, z: 500}
   m_Children: []
   m_Father: {fileID: 8722910012580724431}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &676819669
 BoxCollider:
@@ -4497,6 +4641,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (86)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -4935,6 +5084,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Obstacle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 124b4e21a45ce934291ecd93e82d78dc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 124b4e21a45ce934291ecd93e82d78dc, type: 3}
 --- !u!1001 &767837980
@@ -5028,6 +5182,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a7639006159f286498b322792a0057d0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7639006159f286498b322792a0057d0, type: 3}
@@ -5123,6 +5282,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (67)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1001 &779888564
@@ -5191,6 +5355,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (60)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -5275,7 +5444,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -5326,6 +5495,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -5421,6 +5595,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (93)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1 &842034839
@@ -5437,7 +5616,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &842034840
 Transform:
@@ -5559,7 +5738,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -5610,6 +5789,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -5704,6 +5888,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 124b4e21a45ce934291ecd93e82d78dc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 124b4e21a45ce934291ecd93e82d78dc, type: 3}
@@ -5865,6 +6054,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (98)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -6051,6 +6245,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (80)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1001 &921544062
@@ -6145,6 +6344,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Obstacle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a7639006159f286498b322792a0057d0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7639006159f286498b322792a0057d0, type: 3}
 --- !u!1 &929268601 stripped
@@ -6200,7 +6404,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -6258,7 +6462,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 931540137}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 1191.07}
+  m_LocalPosition: {x: -193.3, y: 30.4, z: 1191.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6279,7 +6483,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -6331,6 +6535,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1001 &936540922
@@ -6348,7 +6557,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -6400,6 +6609,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1 &937344726 stripped
@@ -6442,7 +6656,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -6494,6 +6708,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1 &950255345 stripped
@@ -6536,7 +6755,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -6587,6 +6806,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -6682,6 +6906,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (58)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1001 &973261226
@@ -6699,7 +6928,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -6750,6 +6979,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -6819,6 +7053,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (89)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -6914,6 +7153,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (78)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1001 &1020426430
@@ -6982,6 +7226,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (55)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -7127,6 +7376,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (91)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1001 &1035053963
@@ -7144,7 +7398,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -7195,6 +7449,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -7255,7 +7514,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -7306,6 +7565,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (45)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -7400,6 +7664,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (71)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -7617,6 +7886,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (57)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1001 &1107640582
@@ -7634,7 +7908,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -7686,6 +7960,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1001 &1111145017
@@ -7703,7 +7982,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -7755,6 +8034,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1001 &1128399760
@@ -7772,7 +8056,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -7823,6 +8107,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -7968,6 +8257,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Obstacle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a7639006159f286498b322792a0057d0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7639006159f286498b322792a0057d0, type: 3}
 --- !u!1001 &1156670970
@@ -7985,7 +8279,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -8037,6 +8331,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1 &1157195251 stripped
@@ -8079,7 +8378,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -8130,6 +8429,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -8406,6 +8710,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Obstacle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a7639006159f286498b322792a0057d0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7639006159f286498b322792a0057d0, type: 3}
 --- !u!1 &1217696061 stripped
@@ -8481,7 +8790,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 441276120}
   distance: {fileID: 1742038813}
-  finish: {fileID: 1801191269}
   startPos: {fileID: 1081143712}
 --- !u!4 &1218464062
 Transform:
@@ -8537,7 +8845,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -8589,6 +8897,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1001 &1253064494
@@ -8606,7 +8919,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -8658,6 +8971,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1 &1267814136 stripped
@@ -8699,7 +9017,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1271911113
 Transform:
@@ -8814,6 +9132,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a7639006159f286498b322792a0057d0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7639006159f286498b322792a0057d0, type: 3}
@@ -8934,6 +9257,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Obstacle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8d8c70c8de7a41645a48f6e39788582f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d8c70c8de7a41645a48f6e39788582f, type: 3}
 --- !u!1 &1319836021
@@ -8967,7 +9295,7 @@ Transform:
   m_LocalScale: {x: 30, y: 1, z: 500}
   m_Children: []
   m_Father: {fileID: 8722910012580724431}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: -90}
 --- !u!65 &1319836023
 BoxCollider:
@@ -9121,6 +9449,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (82)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1001 &1340120815
@@ -9138,7 +9471,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -9190,6 +9523,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1001 &1348115152
@@ -9207,7 +9545,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -9259,6 +9597,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1001 &1353481851
@@ -9276,7 +9619,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -9327,6 +9670,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -9422,6 +9770,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Obstacle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 124b4e21a45ce934291ecd93e82d78dc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 124b4e21a45ce934291ecd93e82d78dc, type: 3}
 --- !u!1001 &1356767131
@@ -9439,7 +9792,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -9490,6 +9843,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -9560,6 +9918,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (88)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1001 &1362355637
@@ -9629,6 +9992,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (99)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1 &1369595617
@@ -9645,7 +10013,7 @@ GameObject:
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1369595618
 Transform:
@@ -9780,6 +10148,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (69)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1001 &1407361703
@@ -9848,6 +10221,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (70)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -9942,6 +10320,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 124b4e21a45ce934291ecd93e82d78dc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 124b4e21a45ce934291ecd93e82d78dc, type: 3}
@@ -10087,6 +10470,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Obstacle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 124b4e21a45ce934291ecd93e82d78dc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 124b4e21a45ce934291ecd93e82d78dc, type: 3}
 --- !u!1 &1461179909 stripped
@@ -10154,7 +10542,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -10206,6 +10594,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1001 &1478060552
@@ -10223,7 +10616,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -10274,6 +10667,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -10344,6 +10742,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (76)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1001 &1497475196
@@ -10361,7 +10764,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -10412,6 +10815,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -10481,6 +10889,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (87)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -10575,6 +10988,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8d8c70c8de7a41645a48f6e39788582f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d8c70c8de7a41645a48f6e39788582f, type: 3}
@@ -10711,6 +11129,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 124b4e21a45ce934291ecd93e82d78dc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 124b4e21a45ce934291ecd93e82d78dc, type: 3}
@@ -10873,6 +11296,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Obstacle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8d8c70c8de7a41645a48f6e39788582f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d8c70c8de7a41645a48f6e39788582f, type: 3}
 --- !u!1 &1547589040 stripped
@@ -10915,7 +11343,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -10966,6 +11394,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -11035,6 +11468,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (61)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -11289,6 +11727,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (83)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1 &1630102107 stripped
@@ -11383,6 +11826,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (81)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1 &1632372647 stripped
@@ -11410,6 +11858,115 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.020682681, y: 0.0016573487, z: 0.009961039}
   m_Center: {x: 0.00006828271, y: 0.00029096048, z: -0.0010987559}
+--- !u!1001 &1634713343
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8722910012580724431}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: d966e2dc73cdc1343b3dc319fd036c11,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.6
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d966e2dc73cdc1343b3dc319fd036c11,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d966e2dc73cdc1343b3dc319fd036c11,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.0500488
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d966e2dc73cdc1343b3dc319fd036c11,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d966e2dc73cdc1343b3dc319fd036c11,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d966e2dc73cdc1343b3dc319fd036c11,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d966e2dc73cdc1343b3dc319fd036c11,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d966e2dc73cdc1343b3dc319fd036c11,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d966e2dc73cdc1343b3dc319fd036c11,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d966e2dc73cdc1343b3dc319fd036c11,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d966e2dc73cdc1343b3dc319fd036c11,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d966e2dc73cdc1343b3dc319fd036c11,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1499.3066
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d966e2dc73cdc1343b3dc319fd036c11,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 24518.656
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d966e2dc73cdc1343b3dc319fd036c11,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 90f52371076c08341948ff44f80ff931, type: 2}
+    - target: {fileID: 919132149155446097, guid: d966e2dc73cdc1343b3dc319fd036c11,
+        type: 3}
+      propertyPath: m_Name
+      value: Minigame_ground
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d966e2dc73cdc1343b3dc319fd036c11, type: 3}
+--- !u!1 &1634713344 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d966e2dc73cdc1343b3dc319fd036c11,
+    type: 3}
+  m_PrefabInstance: {fileID: 1634713343}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1634713345
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634713344}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.019999994, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1634713346 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d966e2dc73cdc1343b3dc319fd036c11,
+    type: 3}
+  m_PrefabInstance: {fileID: 1634713343}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1634759540 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
@@ -11552,6 +12109,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Obstacle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 124b4e21a45ce934291ecd93e82d78dc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 124b4e21a45ce934291ecd93e82d78dc, type: 3}
 --- !u!1001 &1655300376
@@ -11645,6 +12207,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a7639006159f286498b322792a0057d0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7639006159f286498b322792a0057d0, type: 3}
@@ -11806,6 +12373,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (66)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1 &1671042401 stripped
@@ -11889,7 +12461,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1680908861
 Transform:
@@ -11973,6 +12545,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (64)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -12458,7 +13035,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -12509,6 +13086,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -12579,6 +13161,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (92)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1 &1785755084 stripped
@@ -12637,7 +13224,7 @@ Transform:
   m_LocalScale: {x: 10, y: 50, z: 50}
   m_Children: []
   m_Father: {fileID: 8722910012580724431}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1789760935
 BoxCollider:
@@ -12714,7 +13301,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -12765,6 +13352,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (48)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -12882,7 +13474,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -12934,6 +13526,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1001 &1824882337
@@ -12951,7 +13548,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -13003,6 +13600,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1 &1830902961 stripped
@@ -13044,7 +13646,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1866714302
 Transform:
@@ -13202,6 +13804,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (96)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1001 &1892465767
@@ -13296,6 +13903,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Obstacle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8d8c70c8de7a41645a48f6e39788582f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d8c70c8de7a41645a48f6e39788582f, type: 3}
 --- !u!1001 &1898898084
@@ -13364,6 +13976,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (68)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -13484,6 +14101,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (72)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1 &1916337259 stripped
@@ -13526,7 +14148,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -13577,6 +14199,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -13686,7 +14313,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -13737,6 +14364,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -13832,6 +14464,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (51)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1001 &2008112840
@@ -13900,6 +14537,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (97)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -13995,6 +14637,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (74)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1 &2015253451 stripped
@@ -14089,6 +14736,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (56)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1 &2048231211 stripped
@@ -14172,7 +14824,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -14224,6 +14876,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1001 &2082270633
@@ -14241,7 +14898,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -14292,6 +14949,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -14360,7 +15022,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -14412,6 +15074,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1001 &2113881782
@@ -14429,7 +15096,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -14481,6 +15148,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (49)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1001 &2132206107
@@ -14498,7 +15170,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -14550,6 +15222,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1001 &2132706755
@@ -14567,7 +15244,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.407
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55e282c4052ca4c429a01f11d3a54106,
         type: 3}
@@ -14618,6 +15295,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigame_fence (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
@@ -14713,6 +15395,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame_fence (59)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55e282c4052ca4c429a01f11d3a54106,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e282c4052ca4c429a01f11d3a54106, type: 3}
 --- !u!1 &2145573331 stripped
@@ -14783,11 +15470,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 1191.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 573298708}
   - {fileID: 297707135}
   - {fileID: 1319836022}
   - {fileID: 676819668}
   - {fileID: 1789760934}
+  - {fileID: 1634713346}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
