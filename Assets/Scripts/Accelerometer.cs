@@ -4,20 +4,25 @@ using UnityEngine;
 
 public class Accelerometer : MonoBehaviour
 {
-    [SerializeField] float moveSpeed = 10f;
+    /*public bool isFlat = true;
+    private Rigidbody rigid;*/
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        //rigid = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        float tiltX = Input.acceleration.x;
-        float tiltZ = Input.acceleration.x;
+        transform.Translate(Input.acceleration.x, 0, -Input.acceleration.z);
 
-        transform.Translate(tiltX * moveSpeed * Time.deltaTime, 0f, tiltZ * moveSpeed * Time.deltaTime);
+        /*Vector3 tilt = Input.acceleration;
+        if (isFlat)
+            tilt = Quaternion.Euler(90, 0, 0) * tilt;
+
+        rigid.AddForce(tilt);*/
     }
 }
