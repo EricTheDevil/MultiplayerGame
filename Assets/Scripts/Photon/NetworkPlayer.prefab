@@ -138,3 +138,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 0
   isReady: 0
+  isFinished: 0

@@ -15,7 +15,7 @@ public class Unit : MonoBehaviour
     public int oldPos = 0;
     public int newPos = 0;
     public bool isReady ;
-    public bool isArrived ;
+    public bool isFinished ;
     //public int damage;
 
     public void MoveUnit(int movement)

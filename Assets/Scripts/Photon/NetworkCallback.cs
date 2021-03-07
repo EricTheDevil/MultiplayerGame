@@ -11,15 +11,25 @@ public class NetworkCallback : GlobalEventListener
     public static int ready = 0;
     BoltEntity currentPlayer;
 
-    void Start()
-    {
-        
-        currentPlayer = BoltNetwork.Instantiate(BoltPrefabs.NetworkPlayer, PlayerInstance.instance.transform.position, Quaternion.identity);
-        players.Add(currentPlayer);
-    }
     public static List<BoltEntity> GetPlayers()
     {
         return players;
+    }
+    public override void SceneLoadLocalDone(string map, IProtocolToken token)
+    {
+        if (!BoltNetwork.IsClient)
+        {
+            currentPlayer = BoltNetwork.Instantiate(BoltPrefabs.NetworkPlayer, PlayerInstance.instance.transform.position, Quaternion.identity);
+            players.Add(currentPlayer);
+        }
+    }
+    public override void SceneLoadRemoteDone(BoltConnection connection, IProtocolToken token)
+    {
+        if (!BoltNetwork.IsServer)
+        {
+            currentPlayer = BoltNetwork.Instantiate(BoltPrefabs.NetworkPlayer, PlayerInstance.instance.transform.position, Quaternion.identity);
+            players.Add(currentPlayer);
+        }
     }
     public static List<bool> GetBool()
     {
