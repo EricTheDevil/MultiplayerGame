@@ -43,7 +43,7 @@ public class RoundSystem : EntityBehaviour<IManager>
 
     private float secondsCount;
     bool gameOver;
-
+    public int nextScene;
     // Start is called before the first frame update
     public override void Attached()
     {
@@ -134,7 +134,8 @@ public class RoundSystem : EntityBehaviour<IManager>
         //playerOne.transform.position = Vector3.Lerp(tilesPrefab.tiles[playerOneUnit.oldPos].position, tilesPrefab.tiles[playerOneUnit.newPos].position, 2f * Time.deltaTime);
     public void LoadMinigame()
     {
-        SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);
+        nextScene = Random.Range(2, 3);
+        SceneManager.LoadSceneAsync(nextScene, LoadSceneMode.Additive);
     }
     public void MoveBack(int amount)
     {

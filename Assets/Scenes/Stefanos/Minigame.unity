@@ -412,6 +412,11 @@ PrefabInstance:
       propertyPath: startPos
       value: 
       objectReference: {fileID: 1026253131}
+    - target: {fileID: 1778951376972371698, guid: 932c1979e6bb99340a871f386fcd0d0d,
+        type: 3}
+      propertyPath: finish
+      value: 
+      objectReference: {fileID: 1456734231}
     - target: {fileID: 1778951376972371699, guid: 932c1979e6bb99340a871f386fcd0d0d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4104,6 +4109,12 @@ PrefabInstance:
 --- !u!4 &1456734230 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1295319133447390670, guid: 410f9287b570f05438e546351d0a03b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1456734229}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1456734231 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 1295319133810752135, guid: 410f9287b570f05438e546351d0a03b0,
     type: 3}
   m_PrefabInstance: {fileID: 1456734229}
   m_PrefabAsset: {fileID: 0}

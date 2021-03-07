@@ -31,7 +31,7 @@ public class Minigame_ski : EntityBehaviour<IMinigame>
             PlayerInstance.instance.GetComponent<Unit>().isReady = false;
             PlayerInstance.instance.GetComponent<Unit>().unitScore = timer;
 
-            SceneManager.UnloadSceneAsync(2);
+            SceneManager.UnloadSceneAsync(RoundSystem.Instance.nextScene);
             RoundSystem.Instance.MoveForward(1);
 
             for (int i = 0; i < NetworkCallback.GetPlayers().Count; i++)
