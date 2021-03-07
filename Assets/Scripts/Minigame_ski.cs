@@ -20,26 +20,27 @@ public class Minigame_ski : EntityBehaviour<IMinigame>
 
     // Update is called once per frame
     public void FixedUpdate()
-    {
+    {      /*
         if (NetworkCallback.GetPlayers().Count == 1)
         {
             Debug.LogError(NetworkCallback.GetPlayers()[1].GetComponent<NetworkPlayer>().isFinished);
         }
-
+            */
         if (PlayerInstance.instance.GetComponent<Unit>().isReady == true)
         {
+            PlayerInstance.instance.GetComponent<Unit>().isReady = false;
             PlayerInstance.instance.GetComponent<Unit>().unitScore = timer;
-            if (NetworkCallback.GetPlayers()[0].GetComponent<NetworkPlayer>().isFinished == true && NetworkCallback.GetPlayers()[1].GetComponent<NetworkPlayer>().isFinished == true)
-            {
-                Debug.LogError("WOW");
-            }
+
+            SceneManager.UnloadSceneAsync(2);
+            RoundSystem.Instance.MoveForward(1);
+
             for (int i = 0; i < NetworkCallback.GetPlayers().Count; i++)
             {
                 Debug.Log(NetworkCallback.GetPlayers().Where(c => !c.GetComponent<NetworkPlayer>().isReady).Count() == NetworkCallback.GetPlayers().Count);
                 if(NetworkCallback.GetPlayers().Where(c => !c.GetComponent<NetworkPlayer>().isReady).Count() == NetworkCallback.GetPlayers().Count)
                 {
                     timeValues.Add(NetworkCallback.GetPlayers()[i].GetComponent<NetworkPlayer>().points);
-                    timeValues.Sort();  
+                    timeValues.Sort(); 
                 }
             }
         }

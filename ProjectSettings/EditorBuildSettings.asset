@@ -6,13 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Eric/Menu.unity
-    guid: 70ccbc3ede70bba4fb9719e9e491a135
+    path: Assets/Scenes/Akseli/Menu.unity
+    guid: 59e8fc2eeaa64e24bbdbe2a740fdae80
   - enabled: 1
-    path: Assets/Scenes/Eric/Game.unity
-    guid: bc865b916122b0c40923296efa624ad6
+    path: Assets/Scenes/Game.unity
+    guid: 0fcb74aef433bac438723bd713b82630
   - enabled: 1
-    path: Assets/Scenes/Eric/Minigame_ski.unity
+    path: Assets/Scenes/Minigame_ski.unity
     guid: e3bfb0ba41e412a4397f436a5ee03473
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 40a7d90cedcde6f4a81d229aeadee254,

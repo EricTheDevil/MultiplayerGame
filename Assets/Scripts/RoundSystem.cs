@@ -134,7 +134,7 @@ public class RoundSystem : EntityBehaviour<IManager>
         //playerOne.transform.position = Vector3.Lerp(tilesPrefab.tiles[playerOneUnit.oldPos].position, tilesPrefab.tiles[playerOneUnit.newPos].position, 2f * Time.deltaTime);
     public void LoadMinigame()
     {
-        //SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);
     }
     public void MoveBack(int amount)
     {
@@ -153,7 +153,16 @@ public class RoundSystem : EntityBehaviour<IManager>
     }
     public void MoveForward(int amount)
     {
-        playerOneUnit.newPos = playerOneUnit.oldPos + amount; 
+        playerOneUnit.newPos = playerOneUnit.oldPos + amount;
+        if (playerOneUnit.newPos >= tilesPrefab.tiles.Count)
+        {
+            playerOneUnit.newPos -= playerOneUnit.oldPos;
+            lap++;
+            trophiesText.gameObject.SetActive(true);
+            trophiesText.text = "VICTORY";
+            diceButton.GetComponent<Button>().interactable = false;
+
+        }
         StartCoroutine(
                  LerpForward
                  (
@@ -190,7 +199,9 @@ public class RoundSystem : EntityBehaviour<IManager>
         {
             if (targetPosition == tilesPrefab.tiles[trophyTiles[i]].transform.position)
             {
-                PlayerInstance.instance.GetComponent<Unit>().unitScore += 1; 
+                int number = trophyTiles[i] + 1;
+                playerOneUnit.oldPos = number;
+                player.position = Vector3.Lerp(targetPosition, tilesPrefab.tiles[trophyTiles[i] + 1].transform.position, 1f);
             }
         }
       
@@ -224,7 +235,9 @@ public class RoundSystem : EntityBehaviour<IManager>
         {
             if (targetPosition == tilesPrefab.tiles[trophyTiles[i]].transform.position)
             {
-                PlayerInstance.instance.GetComponent<Unit>().unitScore += 1;
+                int number = trophyTiles[i] + 1;
+                playerOneUnit.oldPos = number;
+                player.position = Vector3.Lerp(targetPosition, tilesPrefab.tiles[trophyTiles[i] + 1].transform.position, 1f);
             }
         }
 
@@ -286,10 +299,9 @@ public class RoundSystem : EntityBehaviour<IManager>
             Debug.Log(NetworkCallback.GetPlayers().Where(c => c.GetComponent<NetworkPlayer>().isReady).Count());
         }
         */
-        trophiesText.text = PlayerInstance.instance.GetComponent<Unit>().unitScore.ToString();
     }
     private void OnDrawGizmos()
-    {
+    {    /*
         for (int i = 0; i < negativeTiles.Count - 1; i++)
         {
             Gizmos.DrawLine(tilesPrefab.tiles[negativeTiles[i]].transform.position, tilesPrefab.tiles[negativeTiles[i]].transform.position + new Vector3(0, 5, 0));
@@ -299,5 +311,6 @@ public class RoundSystem : EntityBehaviour<IManager>
             Gizmos.color = Color.yellow;
             Gizmos.DrawLine(tilesPrefab.tiles[trophyTiles[i]].transform.position, tilesPrefab.tiles[trophyTiles[i]].transform.position + new Vector3(0, 5, 0));
         }
+        */
     }
 }
