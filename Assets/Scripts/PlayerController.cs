@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -23,14 +22,49 @@ public class PlayerController : MonoBehaviour
 
     public bool fellDown;
     public GameObject A;
+
+    [SerializeField] bool isFlat = true;
+    private Rigidbody rigid;
+
+    void Start()
+    {
+        rigid = GetComponent<Rigidbody>();
+    }
+
+    private void Update()
+    {
+        Vector3 tilt = Input.acceleration;
+
+        if (isFlat)
+            tilt = Quaternion.Euler(90, 0, 0) * tilt * movementSpeed;
+
+        rigid.AddForce(tilt);
+    }
+
     private void Awake()
     {
         anim = GetComponentInChildren<Animator>();
         charController = GetComponent<CharacterController>();
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            movementSpeed = 1;
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            movementSpeed = 15;
+        }
+    }
+    
     private void FixedUpdate()
-    {        
+    {
         if (!fellDown)
         {
             PlayerMovement();
