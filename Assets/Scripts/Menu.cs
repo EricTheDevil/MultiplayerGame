@@ -10,20 +10,18 @@ public class Menu : GlobalEventListener
 {
     public Button joinGameButtonPrefab;
     public GameObject serverListPanel;
-    public GameObject setUsernamePanel;
+    //public GameObject setUsernamePanel;
     private List<Button> joinServerButtons = new List<Button>();
     public float buttonSpacing;
 
     private void Start()
     {
-        setUsernamePanel.SetActive(PlayerPrefs.GetString("username") == null);
+        //setUsernamePanel.SetActive(PlayerPrefs.GetString("username") == null);
     }
 
     public void OnSetUsernameValueChanged(string input)
     {
-        Debug.Log(input);
-
-        PlayerPrefs.SetString("username", input);
+        //PlayerPrefs.SetString("username", input);
     }
 
     // Host button
