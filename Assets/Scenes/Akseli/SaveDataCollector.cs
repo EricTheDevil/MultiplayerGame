@@ -27,9 +27,7 @@ public class SaveDataCollector : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(2))
         {
-            print(startTime);
-            print(currentTime);
-            print(totalTime);
+            
         }
 
     }
