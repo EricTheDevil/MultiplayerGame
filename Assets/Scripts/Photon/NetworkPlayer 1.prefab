@@ -642,11 +642,8 @@ MonoBehaviour:
   unitText: 
   unitLevel: 0
   unitScore: 0
-  turn: 0
   oldPos: 0
   newPos: 0
-  isReady: 0
-  isFinished: 0
 --- !u!114 &-6716683109316877669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -690,4 +687,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 0
   isReady: 0
-  isFinished: 0
