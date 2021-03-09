@@ -5,6 +5,9 @@ using UnityEngine;
 public class PlayerInstance : MonoBehaviour
 {
     private static PlayerInstance _instance;
+    public bool isReady = true;
+    public bool isFinished = false;
+    public int trophies = 0;
     public static PlayerInstance instance
     {
         get

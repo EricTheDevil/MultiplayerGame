@@ -9,6 +9,7 @@ public class NetworkPlayer : EntityBehaviour<IPlayer>
     public int points = 0;
     private GameObject localVRPlayer;
     public bool isReady;
+    public bool isFinished;
     // Start is called before the first frame update
     public int GetPoints()
     {
@@ -46,19 +47,45 @@ public class NetworkPlayer : EntityBehaviour<IPlayer>
             playerStatusCanvas.gameObject.SetActive(false);
             */
         }
+        state.AddCallback("isReady", CheckIsReady);
+        state.AddCallback("isFinished", CheckIsFinished);
+
+        state.AddCallback("Trophies", CheckIsPoints);
+    }
+    void CheckIsReady() //ALL
+    {
+        isReady = state.isReady;
+    }
+    void CheckIsPoints() //ALL
+    {
+        points = (int)state.Trophies;
     }
 
+    void CheckIsFinished() //ALL
+    {
+        isFinished = state.isFinished;
+    }
     // Update is called once per frame
     public override void SimulateOwner()
     {
         if (!entity.IsOwner)
         {
             transform.position = state.Transform.Transform.position;
+            isReady = state.isReady;
             points = (int)state.Trophies;
+
+            isFinished = state.isFinished;
         }
         else
         {
-            state.Trophies = points;
+            state.isReady = PlayerInstance.instance.isReady;
+            isReady = state.isReady;
+
+            state.isFinished = PlayerInstance.instance.isFinished;
+            isFinished = state.isFinished;
+
+            state.Trophies = PlayerInstance.instance.trophies;
+            points = (int)state.Trophies;
             state.Transform.Transform.position = PlayerInstance.instance.transform.position;
         }
     }

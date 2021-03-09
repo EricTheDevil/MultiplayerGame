@@ -8,10 +8,9 @@ public class Hitpoint : MonoBehaviour
     // Start is called before the first frame update
     public void OnTriggerEnter(Collider other)
     {
-            
-         
-        SceneManager.UnloadSceneAsync(2);
-            
+        PlayerInstance.instance.isFinished = true;
+
+        //SceneManager.UnloadSceneAsync(2);  
     }
    
 }

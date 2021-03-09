@@ -8,33 +8,60 @@ using System.Linq;
 public class NetworkCallback : GlobalEventListener
 {
     private static List<BoltEntity> players = new List<BoltEntity>();
+    public static int ready = 0;
     BoltEntity currentPlayer;
 
-    void Start()
-    {
-        currentPlayer = BoltNetwork.Instantiate(BoltPrefabs.NetworkPlayer, PlayerInstance.instance.transform.position, Quaternion.identity);
-        players.Add(currentPlayer);
-    }
     public static List<BoltEntity> GetPlayers()
     {
         return players;
     }
-    /*
-    public static void AddPlayer(BoltEntity player)
+ 
+    public override void OnEvent(PlayerMan evnt)
     {
-        IPlayer a;
-        a.
-        //If the player is already contained in the list the event won't do anything
-        //This is because the event will be fired for all active players when a new player is created
-        if (players.Any(p => p.playerEntity == player) == true)
-            return;
+        players.Add(evnt.Players);
+        Debug.Log(players.Count);
+    }
 
-        if (player.TryFindState<IPlayer>(out IPlayer playerState))
-        {
-            players.Add(playerState);
 
-            LogConnectedPlayers();
+    public override void SceneLoadLocalDone(string map, IProtocolToken token)
+    {
+        if (!BoltNetwork.IsClient)
+        {    
+            currentPlayer = BoltNetwork.Instantiate(BoltPrefabs.NetworkPlayer_1, PlayerInstance.instance.transform.position, Quaternion.identity);
+            var log = PlayerMan.Create();
+            log.Players = currentPlayer;
+            log.Send();    
         }
     }
-    */
+    public override void SceneLoadRemoteDone(BoltConnection connection, IProtocolToken token)
+    {
+        if (!BoltNetwork.IsServer)
+        {
+            currentPlayer = BoltNetwork.Instantiate(BoltPrefabs.NetworkPlayer_1, PlayerInstance.instance.transform.position, Quaternion.identity);
+            var log = PlayerMan.Create();
+            log.Players = currentPlayer;
+            log.Send();
+        }
+    }
+    public static List<bool> GetBool()
+    {
+        List<bool> playerCheck = new List<bool>();
+        playerCheck.Clear();
+        for (int i = 0; i < players.Count; i++)
+        {
+            playerCheck.Add(players[i].GetComponent<NetworkPlayer>().isFinished);
+        }
+        return playerCheck;
+    }
+    public static List<int> GetScore()
+    {                                 
+        List<int> scoreList = new List<int>();
+        scoreList.Clear();
+        for (int i = 0; i < players.Count; i++)
+        {
+            scoreList.Add(players[i].GetComponent<NetworkPlayer>().points);
+        }
+
+        return scoreList;
+    }
 }
