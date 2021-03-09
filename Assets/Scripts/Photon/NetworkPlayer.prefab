@@ -567,7 +567,7 @@ GameObject:
   - component: {fileID: -6716683109316877669}
   - component: {fileID: 8778671782485155691}
   m_Layer: 0
-  m_Name: NetworkPlayer 1
+  m_Name: NetworkPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -675,3 +675,4 @@ MonoBehaviour:
   points: 0
   isReady: 0
   isFinished: 0
+  isVictory: 0

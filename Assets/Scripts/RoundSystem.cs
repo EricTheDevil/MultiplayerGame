@@ -100,9 +100,10 @@ public class RoundSystem : EntityBehaviour<IManager>
             diceText.text = "Rolled : " + diceRoll.ToString();
             if (playerOneUnit.newPos >= tilesPrefab.tiles.Count)
             {
-                playerOneUnit.newPos -= playerOneUnit.oldPos;
+                playerOneUnit.newPos = 0;
                 lap++;
                 trophiesText.gameObject.SetActive(true);
+                PlayerInstance.instance.isVictory = true;
                 trophiesText.text = "VICTORY";
                 diceButton.GetComponent<Button>().interactable = false;
 
@@ -159,6 +160,8 @@ public class RoundSystem : EntityBehaviour<IManager>
         {
             playerOneUnit.newPos -= playerOneUnit.oldPos;
             lap++;
+            PlayerInstance.instance.isVictory = true;
+
             trophiesText.gameObject.SetActive(true);
             trophiesText.text = "VICTORY";
             diceButton.GetComponent<Button>().interactable = false;
@@ -184,7 +187,15 @@ public class RoundSystem : EntityBehaviour<IManager>
             time += Time.deltaTime;
             yield return null;
         }
-
+        if (playerOneUnit.newPos >= tilesPrefab.tiles.Count)
+        {
+            
+            trophiesText.gameObject.SetActive(true);
+            trophiesText.text = "VICTORY";
+            PlayerInstance.instance.isVictory = true;
+            diceButton.GetComponent<Button>().interactable = false;
+            yield return null;
+        }
         player.position = targetPosition;
         playerOneUnit.oldPos = playerOneUnit.newPos;
         for (int i = 0; i < negativeTiles.Count; i++)
@@ -209,7 +220,7 @@ public class RoundSystem : EntityBehaviour<IManager>
         yield return new WaitForSeconds(0.5f);
         diceButton.GetComponent<Button>().interactable = true;
 
-        LoadMinigame();
+        //LoadMinigame();
     }
     IEnumerator LerpForward(Transform player, Vector3 startPosition, Vector3 targetPosition, float duration)
     {
@@ -286,6 +297,22 @@ public class RoundSystem : EntityBehaviour<IManager>
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (NetworkCallback.GetPlayers()[0])
+        {
+            if(NetworkCallback.GetPlayers()[0].GetComponent<NetworkPlayer>().isVictory)
+            {
+                diceButton.GetComponent<Button>().interactable = false;
+            }
+        }
+        if (NetworkCallback.GetPlayers()[1])
+        {
+            if (NetworkCallback.GetPlayers()[1].GetComponent<NetworkPlayer>().isVictory)
+            {
+                diceButton.GetComponent<Button>().interactable = false;
+            }
+        }
+
+
         /*
         Debug.LogWarning(NetworkCallback.GetPlayers()[0].GetComponent<NetworkPlayer>().transform.position);
         if(NetworkCallback.GetPlayers().Count == 2) 

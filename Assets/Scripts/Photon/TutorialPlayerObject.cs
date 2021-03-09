@@ -25,12 +25,12 @@ public class TutorialPlayerObject
         {
             if (IsServer)
             {
-                character = BoltNetwork.Instantiate(BoltPrefabs.NetworkPlayer_1, RoundSystem.Instance.spawnRoom.position, Quaternion.identity);
+                //character = BoltNetwork.Instantiate(BoltPrefabs.NetworkPlayer, RoundSystem.Instance.spawnRoom.position, Quaternion.identity);
                 character.TakeControl();
             }
             else
             {
-                character = BoltNetwork.Instantiate(BoltPrefabs.NetworkPlayer_1, RoundSystem.Instance.spawnRoom.position, Quaternion.identity);
+                //character = BoltNetwork.Instantiate(BoltPrefabs.NetworkPlayer_1, RoundSystem.Instance.spawnRoom.position, Quaternion.identity);
                 character.AssignControl(connection);
             }
         }

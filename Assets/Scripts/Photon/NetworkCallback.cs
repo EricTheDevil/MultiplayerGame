@@ -27,7 +27,7 @@ public class NetworkCallback : GlobalEventListener
     {
         if (!BoltNetwork.IsClient)
         {    
-            currentPlayer = BoltNetwork.Instantiate(BoltPrefabs.NetworkPlayer_1, PlayerInstance.instance.transform.position, Quaternion.identity);
+            currentPlayer = BoltNetwork.Instantiate(BoltPrefabs.NetworkPlayer, PlayerInstance.instance.transform.position, Quaternion.identity);
             var log = PlayerMan.Create();
             log.Players = currentPlayer;
             log.Send();    
@@ -37,7 +37,7 @@ public class NetworkCallback : GlobalEventListener
     {
         if (!BoltNetwork.IsServer)
         {
-            currentPlayer = BoltNetwork.Instantiate(BoltPrefabs.NetworkPlayer_1, PlayerInstance.instance.transform.position, Quaternion.identity);
+            currentPlayer = BoltNetwork.Instantiate(BoltPrefabs.NetworkPlayer, PlayerInstance.instance.transform.position, Quaternion.identity);
             var log = PlayerMan.Create();
             log.Players = currentPlayer;
             log.Send();

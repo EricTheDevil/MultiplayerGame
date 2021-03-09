@@ -10,6 +10,7 @@ public class NetworkPlayer : EntityBehaviour<IPlayer>
     private GameObject localVRPlayer;
     public bool isReady;
     public bool isFinished;
+    public bool isVictory = false;
     // Start is called before the first frame update
     public int GetPoints()
     {
@@ -49,8 +50,12 @@ public class NetworkPlayer : EntityBehaviour<IPlayer>
         }
         state.AddCallback("isReady", CheckIsReady);
         state.AddCallback("isFinished", CheckIsFinished);
-
+        state.AddCallback("isVictory", CheckIsVictory);
         state.AddCallback("Trophies", CheckIsPoints);
+    }
+    void CheckIsVictory() //ALL
+    {
+        isVictory = state.isVictory;
     }
     void CheckIsReady() //ALL
     {
@@ -74,6 +79,7 @@ public class NetworkPlayer : EntityBehaviour<IPlayer>
             isReady = state.isReady;
             points = (int)state.Trophies;
 
+            isVictory = state.isVictory;
             isFinished = state.isFinished;
         }
         else
@@ -83,6 +89,9 @@ public class NetworkPlayer : EntityBehaviour<IPlayer>
 
             state.isFinished = PlayerInstance.instance.isFinished;
             isFinished = state.isFinished;
+
+            state.isVictory = PlayerInstance.instance.isVictory;
+            isVictory = state.isVictory;
 
             state.Trophies = PlayerInstance.instance.trophies;
             points = (int)state.Trophies;
