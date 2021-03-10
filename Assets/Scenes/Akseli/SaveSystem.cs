@@ -3,6 +3,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Globalization;
+using UnityEngine.SceneManagement;
 
 
 public class SaveSystem : MonoBehaviour
@@ -83,16 +84,16 @@ public class SaveSystem : MonoBehaviour
         
         if (Input.GetMouseButtonDown(1))
         {
-            SaveData();
+            //SaveData();
         }
         if (Input.GetMouseButtonDown(2))
         {
-            loaddata();
+          //  loaddata();
             
-            print(data);
-            texti.text = startTime.ToString();
+           // print(data);
+            //texti.text = startTime.ToString();
         }
-        startTime = Time.time;
+       // startTime = Time.time;
 
     }
 
