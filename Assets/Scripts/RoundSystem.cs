@@ -138,6 +138,11 @@ public class RoundSystem : EntityBehaviour<IManager>
         nextScene = Random.Range(2, 2);
         SceneManager.LoadSceneAsync(nextScene, LoadSceneMode.Additive);
     }
+    public void LoadAR()
+    {
+        mainCamera.gameObject.SetActive(false);
+        SceneManager.LoadSceneAsync(3, LoadSceneMode.Additive);
+    }
     public void MoveBack(int amount)
     {
         playerOneUnit.newPos = playerOneUnit.oldPos - amount;
@@ -220,8 +225,9 @@ public class RoundSystem : EntityBehaviour<IManager>
         yield return new WaitForSeconds(0.5f);
         diceButton.GetComponent<Button>().interactable = true;
 
-        //LoadMinigame();
+        LoadMinigame();
     }
+
     IEnumerator LerpForward(Transform player, Vector3 startPosition, Vector3 targetPosition, float duration)
     {
         float time = 0;
