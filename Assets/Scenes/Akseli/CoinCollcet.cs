@@ -6,12 +6,19 @@ using TMPro;
 public class CoinCollcet : MonoBehaviour
 {
     public GameObject collector;
+  
 
-    // Update is called once per frame
+    public void Start()
+    {
+     
+    }
+
     void OnTriggerEnter(Collider other)
     {
         DataHolder.Points += 1;
+      
         //collector.GetComponent<CoinCollector>().addCoin();
         Destroy(gameObject);
     }
+  
 }

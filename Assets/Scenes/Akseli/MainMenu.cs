@@ -9,7 +9,12 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
 
     public AudioMixer audioMixer;
+    public AudioSource clicksound;
 
+    public void Start()
+    {
+        clicksound = GetComponent<AudioSource>();
+    }
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -24,6 +29,10 @@ public class MainMenu : MonoBehaviour
     public void SetVolume(float volume)
     {
         audioMixer.SetFloat("SetVolume", volume);
+    }
+    public void playsound()
+    {
+        clicksound.Play();
     }
 
 
