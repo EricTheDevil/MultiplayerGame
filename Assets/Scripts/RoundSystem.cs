@@ -140,7 +140,6 @@ public class RoundSystem : EntityBehaviour<IManager>
     }
     public void LoadAR()
     {
-        mainCamera.gameObject.SetActive(false);
         SceneManager.LoadSceneAsync(3, LoadSceneMode.Additive);
     }
     public void MoveBack(int amount)

@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Eric/Menu.unity
+    guid: 70ccbc3ede70bba4fb9719e9e491a135
+  - enabled: 1
+    path: Assets/Scenes/Eric/Game.unity
+    guid: bc865b916122b0c40923296efa624ad6
+  - enabled: 1
+    path: Assets/Scenes/Minigame_ski.unity
+    guid: e3bfb0ba41e412a4397f436a5ee03473
+  - enabled: 1
     path: Assets/Scenes/Eric/Test.unity
     guid: 970e1e2faef248a408d8eae35c789bc5
   m_configObjects:
